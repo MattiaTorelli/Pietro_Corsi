@@ -172,22 +172,9 @@ p {
     padding: 20px; /* Spazio interno */
     background-color:  #d8a3a1; /* Colore di sfondo */
     border-radius: 8px; /* Angoli arrotondati */
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-/* Media query per gestire layout responsivo 
-@media screen and (max-width: 768px) {
-    .intervista-item {
-        width: calc(50% - 20px); /* Calcola la larghezza per due colonne con spazio tra loro */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .intervista-item {
-        width: calc(100% - 20px); /* Larghezza piena senza spazio tra le colonne */
-    }
-} */
 
 .intervista-title {
     margin-bottom: 10px;
