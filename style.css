@@ -172,8 +172,8 @@ p {
     padding: 20px; /* Spazio interno */
     background-color:  #d8a3a1; /* Colore di sfondo */
     border-radius: 8px; /* Angoli arrotondati */
-    margin-left: 145px;
-    margin-right: 145px;
+    margin-left: 120px;
+    margin-right: 120px;
 }
 
 /* Media query per gestire layout responsivo */
