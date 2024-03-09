@@ -176,7 +176,7 @@ p {
     margin-right: 120px;
 }
 
-/* Media query per gestire layout responsivo */
+/* Media query per gestire layout responsivo 
 @media screen and (max-width: 768px) {
     .intervista-item {
         width: calc(50% - 20px); /* Calcola la larghezza per due colonne con spazio tra loro */
@@ -187,7 +187,7 @@ p {
     .intervista-item {
         width: calc(100% - 20px); /* Larghezza piena senza spazio tra le colonne */
     }
-}
+} */
 
 .intervista-title {
     margin-bottom: 10px;
