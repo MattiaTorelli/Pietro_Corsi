@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Libro - Pietro Corsi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/logo-hat-pietro.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html">
+           <img  class="logo" src="Images/logo-hat-pietro.png" width="100" height= auto>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biografia.html">Biografia</a></li>
+                    <li><a href="libri.html">Libri</a></li>
+                    <li><a href="interviste.html">Articoli</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <p><a href="index.html">Home</a> > <a href="libri.html">Libri</a> > La figlia del corvo</p>
+        </div>
+
+        <section class="site-title">
+            <h2 class="site-title-heading">La figlia del corvo</h2>
+        </section>
+
+
+        <section class="dettaglio-libro">
+            <div class="dettaglio-libro-content">
+                <div class="dettaglio-libro-container">
+		  <div class="slideshow-container">
+            <div class="slideshow-slide">
+                <img src="Images/figlia-corvo-1.jpeg" alt="Copertina 1">
+            </div>
+            <div class="slideshow-slide">
+                <img src="Images/figlia-corvo-2.jpeg" alt="Copertina 2">
+            </div>
+            <!-- Aggiungi qui altre immagini della copertina -->
+
+            <!-- Pulsanti per scorrere lo slideshow -->
+            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+                    <div class="scheda-libro-link">
+                        <a href="#" class="link-descrizione">Descrizione</a>
+                        <a href="#" class="link-dettagli">Dettagli</a>
+                    </div>
+                     <div class="descrizione">
+                        <p>Il merito di ogni storia, di ogni racconto, è anche quello di farci conoscere qualcosa del mondo che prima non conoscevamo, quello di risvegliare in noi sentimenti che prima non sapevamo esistessero. Pur conoscendo alquanto bene l'Alaska, io stesso nel corso di questi ultimi anni ho compreso nuovi aspetti di questo straordinario territorio e della gente che lo abita da millenni, come gli athabaskan, antenati della curiosa ragazza che in quel lontano 1987 mi si avvicinò all'aeroporto LAX per chiedermi se poteva sedersi accanto a me...</p>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <div class="grid-container_White">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Torelli Mattia IU a.a. 2023/24 ܀ <a href="brief.html">Project Plan</a> ܀  <a href="#">TO THE TOP↑</a></p>
+    </footer>
+
+<script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slideshow-slide");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const linkDescrizione = document.querySelector('.link-descrizione');
+        const linkDettagli = document.querySelector('.link-dettagli');
+        const descrizione = document.querySelector('.descrizione');
+
+        linkDescrizione.addEventListener('click', function (event) {
+            event.preventDefault();
+            descrizione.innerHTML = `<main><div class="descrizione"><p>Il merito di ogni storia, di ogni racconto, è anche quello di farci conoscere qualcosa del mondo che prima non conoscevamo, quello di risvegliare in noi sentimenti che prima non sapevamo esistessero. Pur conoscendo alquanto bene l'Alaska, io stesso nel corso di questi ultimi anni ho compreso nuovi aspetti di questo straordinario territorio e della gente che lo abita da millenni, come gli athabaskan, antenati della curiosa ragazza che in quel lontano 1987 mi si avvicinò all'aeroporto LAX per chiedermi se poteva sedersi accanto a me...</p></div></main>`;
+        });
+
+        linkDettagli.addEventListener('click', function (event) {
+            event.preventDefault();
+            descrizione.innerHTML = `<main><div class="descrizione"><p>
+									Autore: Pietro Corsi, Janna M. Yancey <br> Editore: Di Felice Edizioni <br> Anno di pubblicazione: 2014 <br> Numero di pagine: 88 <br> <a href="https://www.ibs.it/figlia-del-corvo-libro-pietro-corsi-janna-m-yancey/e/9788897726388" target="_blank">Link per acquistarlo</p></div></main>`;
+        });
+    });
+</script>
+
+</body>
+</html>

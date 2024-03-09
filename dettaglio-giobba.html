@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Libro - Pietro Corsi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/logo-hat-pietro.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html">
+           <img  class="logo" src="Images/logo-hat-pietro.png" width="100" height= auto>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biografia.html">Biografia</a></li>
+                    <li><a href="libri.html">Libri</a></li>
+                    <li><a href="interviste.html">Articoli</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <p><a href="index.html">Home</a> > <a href="libri.html">Libri</a> > Dettaglio libri</p>
+        </div>
+
+        <section class="site-title">
+            <h2 class="site-title-heading">La giobba</h2>
+        </section>
+
+
+        <section class="dettaglio-libro">
+            <div class="dettaglio-libro-content">
+                <div class="dettaglio-libro-container">
+		  <div class="slideshow-container">
+            <div class="slideshow-slide">
+                <img src="Images/giobba-1.jpeg" alt="Copertina 1">
+            </div>
+            <div class="slideshow-slide">
+                <img src="Images/giobba-2.jpeg" alt="Copertina 2">
+            </div>
+            <!-- Aggiungi qui altre immagini della copertina -->
+
+            <!-- Pulsanti per scorrere lo slideshow -->
+            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+                    <div class="scheda-libro-link">
+                        <a href="#" class="link-descrizione">Descrizione</a>
+                        <a href="#" class="link-dettagli">Dettagli</a>
+                    </div>
+                     <div class="descrizione">
+                        <p>La giobba di Pietro Corsi è l’epicedio della tragedia dell’emigrazione, della fuga dalla miseria, del bisogno ineludibile e sacro del lavoro. Sta a documentare la denuncia dell’alienazione ed impotenza provata sulla pelle indifesa in un ambiente ostile (e non soltanto dal punto di vista climatico). L’autore , sulla scorta di un’esperienza personale e dolorosa, pone in primo piano la disperazione dell’emigrato, la solitudine provata , il prepotente bisogno degli affetti impediti, il desiderio di ritorno , perché nel cuore c’è sempre un luogo, un paese ( un qualsiasi Palenche ) cui poter tornare per pascersi dell’ozio fino a non poterne più , fino a provare ancora una volta il parossistico vitale desiderio di fuga.</p>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <div class="grid-container_White">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Torelli Mattia IU a.a. 2023/24 ܀ <a href="brief.html">Project Plan</a> ܀  <a href="#">TO THE TOP↑</a></p>
+    </footer>
+
+<script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slideshow-slide");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const linkDescrizione = document.querySelector('.link-descrizione');
+        const linkDettagli = document.querySelector('.link-dettagli');
+        const descrizione = document.querySelector('.descrizione');
+
+        linkDescrizione.addEventListener('click', function (event) {
+            event.preventDefault();
+            descrizione.innerHTML = `<main><div class="descrizione"><p>La giobba di Pietro Corsi è l’epicedio della tragedia dell’emigrazione, della fuga dalla miseria, del bisogno ineludibile e sacro del lavoro. Sta a documentare la denuncia dell’alienazione ed impotenza provata sulla pelle indifesa in un ambiente ostile (e non soltanto dal punto di vista climatico). L’autore , sulla scorta di un’esperienza personale e dolorosa, pone in primo piano la disperazione dell’emigrato, la solitudine provata , il prepotente bisogno degli affetti impediti, il desiderio di ritorno , perché nel cuore c’è sempre un luogo, un paese ( un qualsiasi Palenche ) cui poter tornare per pascersi dell’ozio fino a non poterne più , fino a provare ancora una volta il parossistico vitale desiderio di fuga.</p></div></main>`;
+        });
+
+        linkDettagli.addEventListener('click', function (event) {
+            event.preventDefault();
+            descrizione.innerHTML = `<main><div class="descrizione"><p>Autore: Pietro Corsi <br> Editore: Enne <br> Anno di pubblicazione: 1982 <br> Numero di pagine: 160 <br> <a href="https://www.unilibro.it/libro/corsi-pietro/la-giobba/9788872131008" target="_blank">Link per acquistarlo</p></div></main>`;
+        });
+    });
+</script>
+
+</body>
+</html>

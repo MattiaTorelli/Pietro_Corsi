@@ -1,0 +1,605 @@
+/* Reset CSS */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+	font-size: 2.4em;
+	font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+
+}
+
+p {
+	font-family: "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-size: 22px;
+	color: #ffffff;
+
+}
+
+.header {
+    background-color: #c16f6b;
+    color: #000000;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.4em;
+    
+}
+
+.header-inner {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin-right: 20px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #ddd;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.hero {
+    background-color: #222;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFFFFF; 
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FF0000; 
+}
+
+
+
+.libro-imgcopertina {
+    max-width: 100%;
+    height: initial;
+    display: block;
+    margin: 0 auto;
+    max-height: 200px; 
+}
+
+
+/* Biografia styles */
+.biografia-title {
+    align-items: center;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin: auto;
+    padding : 50px;
+   
+}
+
+.biografia-text {
+   display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  padding: 40px;
+  align-items: center;
+  background-color: #c16f6b;
+  
+}
+
+.biografia-text p {
+    margin-bottom: 15px;
+    margin-right: 300px;
+    margin-left: 300px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #c16f6b;
+    padding: 1em;
+    text-align: center;
+}
+
+
+/* Interviste styles */
+.interviste-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #c16f6b; /* Colore di sfondo */
+    padding: 20px; /* Spazio intorno al contenuto */
+}
+
+.interviste-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.interviste-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.intervista-item {
+    width: calc(33.33% - 20px); /* Calcola la larghezza per tre colonne con spazio tra loro*/
+    margin-bottom: 20px; /* Spazio inferiore tra le interviste */
+    padding: 20px; /* Spazio interno */
+    background-color:  #d8a3a1; /* Colore di sfondo */
+    border-radius: 8px; /* Angoli arrotondati */
+    margin-left: 145px;
+    margin-right: 145px;
+}
+
+/* Media query per gestire layout responsivo */
+@media screen and (max-width: 768px) {
+    .intervista-item {
+        width: calc(50% - 20px); /* Calcola la larghezza per due colonne con spazio tra loro */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intervista-item {
+        width: calc(100% - 20px); /* Larghezza piena senza spazio tra le colonne */
+    }
+}
+
+.intervista-title {
+    margin-bottom: 10px;
+}
+
+.intervista-date {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.intervista-excerpt {
+    margin-bottom: 10px;
+}
+
+.intervista-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.intervista-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Container homepage*/
+
+.grid-container_White {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  background-color: White;
+  padding: 100px;
+}
+
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c16f6b;
+}
+
+ .flex-container > div {
+  background-color: #c16f6b;
+  text-align: center;
+  font-size: 25px;
+  width: 600px;
+  margin: 10px;
+  line-height: 50px;
+}
+
+.image-container {
+  margin-top: 20px; /* Aggiungi spazio tra l'ultimo div e l'immagine */
+}
+
+.image-container img {
+  width: 80%; /* Assicurati che l'immagine si adatti al container */
+  max-width: 500px; /* Imposta la larghezza massima dell'immagine per evitare overflow */
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  padding: 40px;
+  align-items: center;
+  background-color: #c16f6b;
+}
+
+.grid-container2 > div {
+  background-color: #c16f6b;
+  text-align: center;
+  font-size: 25px;
+  width: 600px;
+  margin: 10px;
+  line-height: 40px;
+}
+
+
+.link-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.link-container a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.link-container h2 {
+    text-decoration: none;
+    color: inherit; /* Mantiene il colore del testo del padre */
+}
+
+.link-container a:hover {
+  color: #007bff;
+}
+
+.libro-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+.libro-description {
+    margin-top: 10px;
+    color: #555;
+}
+
+.libro-container {
+    background-color: #c16f6b; /* Colore di sfondo del container */
+    overflow: hidden; /* Nasconde le immagini che potrebbero sporgere dal container */
+}
+
+
+.libro-img {
+    width: calc(100% / 3); /* Imposta la larghezza delle immagini in modo che ce ne siano tre per riga */
+    float: left; /* Posiziona le immagini una accanto all'altra */
+    box-sizing: border-box; /* Include il padding e il bordo nella larghezza specificata */
+    padding: 5px; /* Aggiunge uno spazio tra le immagini */
+}
+
+.libri-list {
+    list-style: none; /* Rimuove i punti elenco predefiniti */
+    margin: 0;
+    padding: 0;
+}
+
+.libro {
+    width: calc(100% / 3); /* Imposta la larghezza del container del libro in modo che ce ne siano tre per riga */
+    float: left; /* Posiziona i container dei libri uno accanto all'altro */
+    box-sizing: border-box; /* Include il padding e il bordo nella larghezza specificata */
+    padding: 5px; /* Aggiunge uno spazio tra i container dei libri */
+}
+
+
+.strumenti-navigazione {
+    background-color: #f8f8f8; /* Colore di sfondo */
+    padding: 20px; /* Spaziatura interna */
+    border-radius: 8px; /* Bordo arrotondato */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+.nav-title {
+    margin-bottom: 10px; /* Spaziatura inferiore */
+    font-size: 24px; /* Dimensione del testo */
+    color: #333; /* Colore del testo */
+}
+
+.nav-forms {
+    display: flex; /* Utilizza il layout flex */
+    align-items: center; /* Allinea gli elementi verticalmente */
+}
+
+.nav-label {
+    margin-right: 10px; /* Spaziatura a destra */
+    font-size: 16px; /* Dimensione del testo */
+    color: #666; /* Colore del testo */
+}
+
+.nav-select,
+.nav-input,
+.nav-button {
+    padding: 8px; /* Spaziatura interna */
+    font-size: 16px; /* Dimensione del testo */
+    border: 1px solid #ccc; /* Bordo */
+    border-radius: 4px; /* Bordo arrotondato */
+}
+
+.nav-select {
+    flex: 1; /* Espandi per riempire lo spazio disponibile */
+}
+
+.nav-button {
+    background-color: #c16f6b; /* Colore di sfondo */
+    color: white; /* Colore del testo */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: background-color 0.3s; /* Effetto di transizione sul cambio di colore di sfondo */
+}
+
+.nav-button:hover {
+    background-color: #a45c57; /* Cambia il colore di sfondo al passaggio del mouse */
+}
+
+
+/* Stile per il titolo del sito */
+.site-title {
+
+    text-align: center;
+    margin-top: 50px; /* Aggiungi margine sopra il titolo */
+}
+
+.site-title-heading {
+    font-size: 3.5em;
+    color: #333; /* Colore del testo */
+    padding: 30px;
+}
+
+.site-subtitle {
+    font-size: 1.8em;
+    color: #333; /* Colore del testo */
+    margin-top: 5px;
+
+}
+
+/* Stile per il container della foto dello scrittore */
+.author-photo-container {
+    text-align: center; /* Centra l'elemento */
+    margin-top: 20px; /* Aggiungi margine sopra il container */
+    padding: 150px;
+    background-color: #eed8d7;
+    margin-top: 35px;
+}
+
+.author-photo {
+    width: 550px; /* Larghezza dell'immagine */
+    height: auto; /* Altezza automatica per mantenere le proporzioni */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra leggera */
+}
+
+
+/* Stile per i breadcrumb */
+.breadcrumb {
+    margin-top: 20px; /* Aggiungi spazio sopra i breadcrumb */
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    
+    text-decoration: none;
+    color: #000000; /* Colore del testo */
+    transition: color 0.3s; /* Transizione per il cambio di colore del testo */
+}
+
+.breadcrumb a:hover {
+    color: #007bff; /* Cambia colore del testo al passaggio del mouse */
+}
+
+.breadcrumb p {
+    color: #000;
+    margin: 0; /* Rimuovi il margine */
+    font-size: 1.1em; /* Dimensione del font */
+}
+
+.breadcrumb p::after {
+    content: ">"; /* Aggiungi il simbolo ">" dopo ogni link */
+    margin: 0 5px; /* Margine attorno al simbolo */
+    color:  #000; /* Colore del simbolo */
+}
+
+.breadcrumb p:last-child::after {
+    content: ""; /* Rimuovi il simbolo ">" dopo l'ultimo link */
+}
+
+
+
+/* Stile per il container del dettaglio del libro */
+.dettaglio-libro-container {
+    display: flex; /* Utilizza il layout flessibile */
+    padding: 80px;
+    align-items: center; /* Allinea verticalmente al centro */
+    justify-content: center; /* Allinea orizzontalmente al centro */
+    background-color: #c16f6b;
+}
+
+/* Stile per l'immagine di copertina del libro */
+.dettaglio-libro-image {
+    max-width: 350px; /* Larghezza massima dell'immagine */
+    height: auto; /* Mantiene l'aspetto proporzionato dell'immagine */
+    margin-right: 50px;
+}
+
+
+/* Stile per il contenitore del testo del dettaglio del libro */
+.dettaglio-libro-text {
+    flex: 1; /* L'elemento occupa lo spazio rimanente */
+}
+
+/* Stile per il titolo del libro */
+.dettaglio-libro-title {
+    font-size: 24px; /* Dimensione del titolo del libro */
+    margin-bottom: 10px; /* Spazio inferiore dal titolo */
+}
+
+/* Stile per il tipo del libro */
+.dettaglio-libro-type {
+    font-size: 18px; /* Dimensione del testo del tipo del libro */
+    margin-bottom: 10px; /* Spazio inferiore dal tipo del libro */
+    font-style: italic; /* Stile corsivo per il tipo del libro */
+}
+
+
+.indice {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.indice ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.indice ul li {
+    margin-bottom: 10px;
+}
+
+.indice ul li a {
+    text-decoration: none;
+    color: #232f3e;
+}
+
+.indice ul li a:hover {
+    color: #c16f6b;
+}
+
+
+.container-PP {
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+  padding: 100px;
+  grid-template-columns: auto;
+  display: grid;
+  background-color: #c16f6b;
+}
+
+.PP-text {
+    margin-right: 250px;
+    margin-left: 250px;
+}
+
+
+ .scheda-libro-link {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .scheda-libro-link a {
+            margin: 0 10px;
+            padding: 8px 16px;
+            background-color: #c16f6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+	    aling-items: center;
+        }
+
+        .scheda-libro-link a:hover {
+            background-color: #a45550;
+        }
+
+       .dettaglio-libro-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .dettaglio-libro-container img {
+            margin-bottom: 20px;
+        }
+
+        .descrizione {
+            text-align: justify;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .slideshow-slide {
+            display: none;
+            width: 100%;
+        }
+        
+        .slideshow-slide img {
+            width: 500px;
+            height: auto;
+        }
+        
+        .slideshow-prev, .slideshow-next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            padding: 16px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            user-select: none;
+        }
+        
+        .slideshow-prev {
+            left: 0;
+        }
+        
+        .slideshow-next {
+            right: 0;
+        }

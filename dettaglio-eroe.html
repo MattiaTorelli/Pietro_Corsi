@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Libro - Pietro Corsi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/logo-hat-pietro.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html">
+           <img  class="logo" src="Images/logo-hat-pietro.png" width="100" height= auto>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biografia.html">Biografia</a></li>
+                    <li><a href="libri.html">Libri</a></li>
+                    <li><a href="interviste.html">Articoli</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <p><a href="index.html">Home</a> > <a href="libri.html">Libri</a> > Un uomo, un eroe</p>
+        </div>
+
+        <section class="site-title">
+            <h2 class="site-title-heading">Un uomo, un eroe</h2>
+        </section>
+
+
+        <section class="dettaglio-libro">
+            <div class="dettaglio-libro-content">
+                <div class="dettaglio-libro-container">
+		  <div class="slideshow-container">
+            <div class="slideshow-slide">
+                <img src="Images/uomo-eroe-1.jpeg" alt="Copertina 1">
+            </div>
+            <div class="slideshow-slide">
+                <img src="Images/uomo-eroe-2.jpeg" alt="Copertina 2">
+            </div>
+            <!-- Aggiungi qui altre immagini della copertina -->
+
+            <!-- Pulsanti per scorrere lo slideshow -->
+            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+                    <div class="scheda-libro-link">
+                        <a href="#" class="link-descrizione">Descrizione</a>
+                        <a href="#" class="link-dettagli">Dettagli</a>
+                    </div>
+                     <div class="descrizione">
+                        <p>Non un memoriale autobiografico scritto “a posteriori”, non un diario scritto in tempo reale, non un romanzo, non un saggio di storia. Eppure le pagine di questo libro sono un po’ tutto questo. Come in un grande, prezioso contenitore, l’autore, con spiccata sensibilità e con indubbia duttilità stilistica, è riuscito a creare un legame tra diversi contenuti e tra i più svariati registri linguistici, smussandone i dislivelli e amalgamandoli in un unico percorso narrativo. </p>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <div class="grid-container_White">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Torelli Mattia IU a.a. 2023/24 ܀ <a href="brief.html">Project Plan</a> ܀  <a href="#">TO THE TOP↑</a></p>
+    </footer>
+
+<script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slideshow-slide");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const linkDescrizione = document.querySelector('.link-descrizione');
+        const linkDettagli = document.querySelector('.link-dettagli');
+        const descrizione = document.querySelector('.descrizione');
+
+        linkDescrizione.addEventListener('click', function (event) {
+            event.preventDefault();
+            descrizione.innerHTML = `<main><div class="descrizione"><p>Non un memoriale autobiografico scritto “a posteriori”, non un diario scritto in tempo reale, non un romanzo, non un saggio di storia. Eppure le pagine di questo libro sono un po’ tutto questo. Come in un grande, prezioso contenitore, l’autore, con spiccata sensibilità e con indubbia duttilità stilistica, è riuscito a creare un legame tra diversi contenuti e tra i più svariati registri linguistici, smussandone i dislivelli e amalgamandoli in un unico percorso narrativo. </p></div></main>`;
+        });
+
+        linkDettagli.addEventListener('click', function (event) {
+            event.preventDefault();
+            descrizione.innerHTML = `<main><div class="descrizione"><p>Autore: Pietro Corsi<br> Editore: Edizioni ANRP <br> Anno di pubblicazione: ???? <br> Numero di pagine: ??? <br> <a href="https://www.anrp.it/libri/solarino-12-luglio-1943-un-uomo-un-eroe-domenico-mimi-cavaiola/" target="_blank">Link per acquistarlo</p></div></main>`;
+        });
+    });
+</script>
+
+</body>
+</html>
