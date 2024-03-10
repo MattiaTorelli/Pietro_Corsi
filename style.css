@@ -590,3 +590,73 @@ p {
         .slideshow-next {
             right: 0;
         }
+
+
+
+/* Media Query per dispositivi di larghezza massima di 768px (tablet) */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column; /* Cambia la direzione dei flex items per la disposizione verticale */
+        align-items: center; /* Allinea gli elementi al centro */
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column; /* Cambia la direzione dei flex items per la disposizione verticale */
+        align-items: center; /* Allinea gli elementi al centro */
+        text-align: center;
+    }
+
+    .nav ul li {
+        margin-right: 0; /* Rimuove il margine destro tra gli elementi del menu */
+        margin-bottom: 10px; /* Aggiunge spazio inferiore tra gli elementi del menu */
+    }
+
+    .main {
+        padding: 10px; /* Riduce il padding */
+    }
+
+    .biografia-title {
+        padding: 10px; /* Riduce il padding */
+    }
+
+    .biografia-text p {
+        margin-right: 0; /* Rimuove il margine destro */
+        margin-left: 0; /* Rimuove il margine sinistro */
+    }
+
+    .intervista-item {
+        width: 100%; /* Occupa tutto lo spazio disponibile */
+        margin-right: 0; /* Rimuove il margine destro */
+    }
+}
+
+/* Media Query per dispositivi di larghezza massima di 576px (smartphone) */
+@media (max-width: 576px) {
+    .logo {
+        font-size: 1.2rem; /* Riduce la dimensione del logo */
+    }
+
+    .nav ul li a {
+        font-size: 0.9rem; /* Riduce la dimensione del testo nel menu di navigazione */
+    }
+
+    .main {
+        padding: 5px; /* Riduce il padding */
+    }
+
+    .hero h2 {
+        font-size: 1.8rem; /* Riduce la dimensione del titolo nell'hero section */
+    }
+
+    .biografia-text p {
+        margin-right: 10px; /* Riduce il margine destro */
+        margin-left: 10px; /* Riduce il margine sinistro */
+    }
+
+    .intervista-item {
+        width: 100%; /* Occupa tutto lo spazio disponibile */
+        margin-right: 0; /* Rimuove il margine destro */
+    }
+}
+
