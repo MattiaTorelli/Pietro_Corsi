@@ -660,3 +660,48 @@ p {
     }
 }
 
+/* Media Query per dispositivi di larghezza massima di 768px (tablet) */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.8rem; /* Riduce la dimensione del titolo nell'hero section */
+    }
+
+    .biografia-text p {
+        margin-right: 10px; /* Riduce il margine destro */
+        margin-left: 10px; /* Riduce il margine sinistro */
+    }
+
+    .intervista-item {
+        width: 100%; /* Occupa tutto lo spazio disponibile */
+        margin-right: 0; /* Rimuove il margine destro */
+    }
+
+    .dettaglio-libro-image {
+        max-width: 100%; /* Assicura che l'immagine si adatti al contenitore */
+        margin-right: 0; /* Rimuove il margine destro */
+    }
+}
+
+/* Media Query per dispositivi di larghezza massima di 576px (smartphone) */
+@media (max-width: 576px) {
+    .hero h2 {
+        font-size: 1.5rem; /* Riduce ulteriormente la dimensione del titolo nell'hero section */
+    }
+
+    .biografia-text p {
+        margin-right: 5px; /* Riduce ulteriormente il margine destro */
+        margin-left: 5px; /* Riduce ulteriormente il margine sinistro */
+    }
+
+    .intervista-item {
+        width: 100%; /* Occupa tutto lo spazio disponibile */
+        margin-right: 0; /* Rimuove il margine destro */
+    }
+
+    .dettaglio-libro-image {
+        max-width: 100%; /* Assicura che l'immagine si adatti al contenitore */
+        margin-right: 0; /* Rimuove il margine destro */
+    }
+}
+
+
