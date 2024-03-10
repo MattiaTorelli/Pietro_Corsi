@@ -676,9 +676,13 @@ p {
         margin-right: 0; /* Rimuove il margine destro */
     }
 
-    .dettaglio-libro-image {
-        max-width: 100%; /* Assicura che l'immagine si adatti al contenitore */
+    .dettaglio-libro-image-container {
+        max-width: 100%; /* Assicura che il container si adatti al contenitore padre */
         margin-right: 0; /* Rimuove il margine destro */
+    }
+
+    .dettaglio-libro-image {
+        max-width: 100%; /* Assicura che l'immagine si adatti al container */
     }
 }
 
@@ -698,10 +702,15 @@ p {
         margin-right: 0; /* Rimuove il margine destro */
     }
 
-    .dettaglio-libro-image {
-        max-width: 100%; /* Assicura che l'immagine si adatti al contenitore */
+    .dettaglio-libro-image-container {
+        max-width: 100%; /* Assicura che il container si adatti al contenitore padre */
         margin-right: 0; /* Rimuove il margine destro */
     }
+
+    .dettaglio-libro-image {
+        max-width: 100%; /* Assicura che l'immagine si adatti al container */
+    }
 }
+
 
 
