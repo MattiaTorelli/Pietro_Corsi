@@ -517,79 +517,79 @@ p {
 
 
  .scheda-libro-link {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+    display: flex;
+    justify-content: center;
+	margin-bottom: 20px;
+ }
 
-        .scheda-libro-link a {
-            margin: 0 10px;
-            padding: 8px 16px;
-            background-color: #c16f6b;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-	    aling-items: center;
-        }
+.scheda-libro-link a {
+	margin: 0 10px;
+	padding: 8px 16px;
+	background-color: #c16f6b;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+	aling-items: center;
+}
 
-        .scheda-libro-link a:hover {
-            background-color: #a45550;
-        }
+.scheda-libro-link a:hover {
+	background-color: #a45550;
+}
 
-       .dettaglio-libro-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+.dettaglio-libro-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
 
-        .dettaglio-libro-container img {
-            margin-bottom: 20px;
-        }
+.dettaglio-libro-container img {
+	margin-bottom: 20px;
+}
 
-        .descrizione {
-            text-align: justify;
-        }
+.descrizione {
+	text-align: justify;
+}
 
-        .slideshow-container {
-            position: relative;
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
-        }
+.slideshow-container {
+	position: relative;
+	max-width: 800px;
+	margin: auto;
+	overflow: hidden;
+}
+    
+.slideshow-slide {
+	display: none;
+	width: 100%;
+}
+    
+.slideshow-slide img {
+	width: 500px;
+	height: auto;
+}
         
-        .slideshow-slide {
-            display: none;
-            width: 100%;
-        }
+.slideshow-prev, .slideshow-next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: auto;
+	padding: 16px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	user-select: none;
+}
+    
+.slideshow-prev {
+	left: 0;
+}
         
-        .slideshow-slide img {
-            width: 500px;
-            height: auto;
-        }
-        
-        .slideshow-prev, .slideshow-next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: auto;
-            padding: 16px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            user-select: none;
-        }
-        
-        .slideshow-prev {
-            left: 0;
-        }
-        
-        .slideshow-next {
-            right: 0;
-        }
+.slideshow-next {
+	right: 0;
+}
 
 
 
@@ -657,58 +657,6 @@ p {
     .intervista-item {
         width: 100%; /* Occupa tutto lo spazio disponibile */
         margin-right: 0; /* Rimuove il margine destro */
-    }
-}
-
-/* Media Query per dispositivi di larghezza massima di 768px (tablet) */
-@media (max-width: 768px) {
-    .hero h2 {
-        font-size: 1.8rem; /* Riduce la dimensione del titolo nell'hero section */
-    }
-
-    .biografia-text p {
-        margin-right: 10px; /* Riduce il margine destro */
-        margin-left: 10px; /* Riduce il margine sinistro */
-    }
-
-    .intervista-item {
-        width: 100%; /* Occupa tutto lo spazio disponibile */
-        margin-right: 0; /* Rimuove il margine destro */
-    }
-
-    .dettaglio-libro-image-container {
-        max-width: 100%; /* Assicura che il container si adatti al contenitore padre */
-        margin-right: 0; /* Rimuove il margine destro */
-    }
-
-    .dettaglio-libro-image {
-        max-width: 100%; /* Assicura che l'immagine si adatti al container */
-    }
-}
-
-/* Media Query per dispositivi di larghezza massima di 576px (smartphone) */
-@media (max-width: 576px) {
-    .hero h2 {
-        font-size: 1.5rem; /* Riduce ulteriormente la dimensione del titolo nell'hero section */
-    }
-
-    .biografia-text p {
-        margin-right: 5px; /* Riduce ulteriormente il margine destro */
-        margin-left: 5px; /* Riduce ulteriormente il margine sinistro */
-    }
-
-    .intervista-item {
-        width: 100%; /* Occupa tutto lo spazio disponibile */
-        margin-right: 0; /* Rimuove il margine destro */
-    }
-
-    .dettaglio-libro-image-container {
-        max-width: 100%; /* Assicura che il container si adatti al contenitore padre */
-        margin-right: 0; /* Rimuove il margine destro */
-    }
-
-    .dettaglio-libro-image {
-        max-width: 100%; /* Assicura che l'immagine si adatti al container */
     }
 }
 
