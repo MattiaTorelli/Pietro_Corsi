@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Libro - Pietro Corsi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/logo-hat-pietro.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html">
+           <img  class="logo" src="Images/logo-hat-pietro.png" width="100" height= auto>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biografia.html">Biografia</a></li>
+                    <li><a href="libri.html">Libri</a></li>
+                    <li><a href="interviste.html">Interviste</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <p><a href="index.html">Home</a> > <a href="libri.html">Libri</a> > Dettaglio libri</p>
+        </div>
+
+        <section class="site-title">
+            <h2 class="site-title-heading">Amapola della Sierra Madre</h2>
+        </section>
+
+
+        <section class="dettaglio-libro">
+            <div class="dettaglio-libro-content">
+                <div class="dettaglio-libro-container">
+		  <div class="slideshow-container">
+            <div class="slideshow-slide">
+                <img src="Images/omicidio-1.jpg" alt="Copertina 1">
+            </div>
+            <div class="slideshow-slide">
+                <img src="Images/omicidio-2.jpg" alt="Copertina 2">
+            </div>
+            <!-- Aggiungi qui altre immagini della copertina -->
+
+            <!-- Pulsanti per scorrere lo slideshow -->
+            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+                    <div class="scheda-libro-link">
+                        <a href="#" class="link-descrizione">Descrizione</a>
+                        <a href="#" class="link-dettagli">Dettagli</a>
+                    </div>
+                     <div class="descrizione">
+                        <p>Un fatto di cronaca che sconvolge la vita di un piccolo paese del Meridione nel settembre del 1951: l’omicidio del giovane Mimì Ferrara, un fatto di sangue inspiegabile che coinvolge tutti gli abitanti. Un evento che rompe quel clima immobile del “paese sereno” di joviniana memoria. La scansione del racconto è concentrata nell’arco di una settimana; ogni capitolo occupa un giorno e porta in epigrafe un pensiero di Frate Indovino, il calendario popolare spesso unica presenza di una cultura scritta nelle case contadine fino agli anni Cinquanta, referente simbolico di un tempo ciclico, immobile, senza sviluppo, che entra nel vissuto popolare quotidiano tanto che frasi idiomatiche e pensieri di Frate Indovino si trovano sparsi anche nei dialoghi.</p>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <div class="grid-container_White">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Torelli Mattia IU a.a. 2023/24 ܀ <a href="brief.html">Project Plan</a> ܀  <a href="#">TO THE TOP↑</a></p>
+    </footer>
+
+<script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slideshow-slide");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const linkDescrizione = document.querySelector('.link-descrizione');
+        const linkDettagli = document.querySelector('.link-dettagli');
+        const descrizione = document.querySelector('.descrizione');
+
+        linkDescrizione.addEventListener('click', function (event) {
+            event.preventDefault();
+            descrizione.innerHTML = `<main><div class="descrizione"><p>Un fatto di cronaca che sconvolge la vita di un piccolo paese del Meridione nel settembre del 1951: l’omicidio del giovane Mimì Ferrara, un fatto di sangue inspiegabile che coinvolge tutti gli abitanti. Un evento che rompe quel clima immobile del “paese sereno” di joviniana memoria. La scansione del racconto è concentrata nell’arco di una settimana; ogni capitolo occupa un giorno e porta in epigrafe un pensiero di Frate Indovino, il calendario popolare spesso unica presenza di una cultura scritta nelle case contadine fino agli anni Cinquanta, referente simbolico di un tempo ciclico, immobile, senza sviluppo, che entra nel vissuto popolare quotidiano tanto che frasi idiomatiche e pensieri di Frate Indovino si trovano sparsi anche nei dialoghi.</p></div></main>`;
+        });
+
+        linkDettagli.addEventListener('click', function (event) {
+            event.preventDefault();
+            descrizione.innerHTML = `<main><div class="descrizione"><p>Autore: Pietro Corsi <br> Editore: Edizioni Enne <br> Anno di pubblicazione: 2016 <br> Numero di pagine: 175 <br> </p></div></main>`;
+        });
+    });
+</script>
+
+</body>
+</html>
