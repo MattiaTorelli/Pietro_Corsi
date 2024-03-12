@@ -53,9 +53,10 @@
         <form class="form-ordinamento">
             <label for="ordinamento" class="nav-label">Ordina per:</label>
             <select id="ordinamento" class="nav-select">
-                <option value="titolo">Titolo (A-Z)</option>
-                <option value="anno">Anno di Pubblicazione</option>
-                <option value="tipo">Tipo di Libro</option>
+                <option value="titoloAZ">Titolo (A-Z)</option>
+		<option value="titoloZA">Titolo (Z-A)</option>
+                <option value="annoON">Anno di Pubblicazione (Old-New)</option>
+		<option value="annoNO">Anno di Pubblicazione (New-Old)</option>
             </select>
             <button type="submit" class="nav-button">Ordina</button>
         </form>
@@ -149,7 +150,7 @@
 			<li class="libro">
 			<a href="dettaglio-luna.html">
   			<img src="Images/certo-giro-luna-1.jpeg" class="libro-img" width="200" height="300">
-			<h3 class="libro-title">un certo giro di luna</h3>
+			<h3 class="libro-title">Un certo giro di luna</h3>
                         <p class="libro-year">Anno di pubblicazione: 2013</p>
 			</a>
 			</li>
@@ -179,18 +180,35 @@
             const libriItems = Array.from(libriList.children);
 
             switch (ordinamentoSelezionato) {
-                case "titolo":
+                case "titoloAZ":
                     libriItems.sort((a, b) => {
                         const titoloA = a.querySelector(".libro-title").textContent.toLowerCase();
                         const titoloB = b.querySelector(".libro-title").textContent.toLowerCase();
                         return titoloA.localeCompare(titoloB);
                     });
                     break;
-                case "anno":
+
+		 case "titoloZA":
+                    libriItems.sort((a, b) => {
+                        const titoloA = a.querySelector(".libro-title").textContent.toLowerCase();
+                        const titoloB = b.querySelector(".libro-title").textContent.toLowerCase();
+                        return titoloB.localeCompare(titoloA);
+                    });
+                    break;
+                
+		case "annoON":
                     libriItems.sort((a, b) => {
                         const annoA = parseInt(a.querySelector(".libro-year").textContent.split(":")[1].trim());
                         const annoB = parseInt(b.querySelector(".libro-year").textContent.split(":")[1].trim());
                         return annoA - annoB;
+                    });
+                    break;
+
+		case "annoNO":
+                    libriItems.sort((a, b) => {
+                        const annoA = parseInt(a.querySelector(".libro-year").textContent.split(":")[1].trim());
+                        const annoB = parseInt(b.querySelector(".libro-year").textContent.split(":")[1].trim());
+                        return annoB - annoA;
                     });
                     break;
             }
